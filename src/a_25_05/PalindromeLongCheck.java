@@ -30,17 +30,29 @@ public class PalindromeLongCheck {
         while (number > 0) {
             longDigit = number % 10;
             digits[i++] = longDigit.intValue(); //I had to use this conversion, simply casting to int gave me weird results
-            number = number/10;
+            number = number / 10;
         }
 
-        for (int j=0; j<i/2; j++)
-            if (digits[j] != digits[i-j-1]) {
+        for (int j = 0; j < i / 2; j++)
+            if (digits[j] != digits[i - j - 1]) {
                 isPalindrome = false;
                 break;
             }
 
         return isPalindrome;
     }
+
+    static boolean checkPalindrome(long number) {
+        long numberCopy = number;
+        long reverse;
+
+        while (number != 0) {
+            reverse = number % 10;
+            number = number / 10;
+        }
+        return numberCopy == reverse;
+    }
+
 
     static boolean checkPalindromeNoArray(long number) {
 
