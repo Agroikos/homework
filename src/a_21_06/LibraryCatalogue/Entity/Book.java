@@ -1,4 +1,4 @@
-package a_21_06.libraryCatalogue.Entity;
+package a_21_06.LibraryCatalogue.Entity;
 
 public class Book {
     private String name;

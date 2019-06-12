@@ -1,6 +1,6 @@
-package a_21_06.libraryCatalogue;
+package a_21_06.LibraryCatalogue;
 
-import a_21_06.libraryCatalogue.Entity.Book;
+import a_21_06.LibraryCatalogue.Entity.Book;
 
 import java.util.Arrays;
 

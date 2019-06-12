@@ -1,8 +1,8 @@
-package a_21_06.libraryCatalogue;
+package a_21_06.LibraryCatalogue;
 
-import a_21_06.libraryCatalogue.Entity.Album;
-import a_21_06.libraryCatalogue.Entity.Novel;
-import a_21_06.libraryCatalogue.InitialData.DataCollections;
+import a_21_06.LibraryCatalogue.Entity.Album;
+import a_21_06.LibraryCatalogue.Entity.Novel;
+import a_21_06.LibraryCatalogue.InitialData.DataCollections;
 
 public class Main {
     public static void main(String[] args) {

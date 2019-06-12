@@ -1,15 +1,15 @@
-package a_21_06.libraryCatalogue.InitialData;
+package a_21_06.LibraryCatalogue.InitialData;
 
-import a_21_06.libraryCatalogue.Entity.Album;
-import a_21_06.libraryCatalogue.Entity.Novel;
+import a_21_06.LibraryCatalogue.Entity.Album;
+import a_21_06.LibraryCatalogue.Entity.Novel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static a_21_06.libraryCatalogue.Entity.Album.PaperQuality.*;
-import static a_21_06.libraryCatalogue.Entity.Album.PaperQuality.Coarse;
-import static a_21_06.libraryCatalogue.Entity.Novel.Type.Romance;
-import static a_21_06.libraryCatalogue.Entity.Novel.Type.SciFi;
+import static a_21_06.LibraryCatalogue.Entity.Album.PaperQuality.*;
+import static a_21_06.LibraryCatalogue.Entity.Album.PaperQuality.Coarse;
+import static a_21_06.LibraryCatalogue.Entity.Novel.Type.Romance;
+import static a_21_06.LibraryCatalogue.Entity.Novel.Type.SciFi;
 
 public class DataCollections {
     //testing values

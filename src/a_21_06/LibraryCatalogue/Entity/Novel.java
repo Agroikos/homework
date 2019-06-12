@@ -1,4 +1,4 @@
-package a_21_06.libraryCatalogue.Entity;
+package a_21_06.LibraryCatalogue.Entity;
 
 public class Novel extends Book {
     public enum Type {Mystery, SciFi, Romance, Adventure, Thriller, Crime}
