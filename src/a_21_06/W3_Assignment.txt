@@ -1,0 +1,24 @@
+OOP homework
+
+1.
+   a. Solve the Introduction Hackerrank challenges: https://www.hackerrank.com/domains/java?filters%5Bsubdomains%5D%5B%5D=java-introduction
+   b. Solve the OOP Hackerrank challenges: https://www.hackerrank.com/domains/java?filters%5Bsubdomains%5D%5B%5D=oop
+
+At this point I want a printscreen with Solved status of each challenge like in the attached image. You can add it inside the package
+with the current homework and push it to Git.
+
+2. Refactor all the exercises from the previous homework by putting each of them inside a method from the same class and call the
+method from the main method. Give parameters for each method in order for the implemented algorithm by each method to be generic
+(work for any input, not a hardcoded one). Read the input from keyboard.
+
+3.Implement the Bank payments application described in the Object Oriented Design Cheat Sheet pdf attached to the week 3 following the
+UML diagram in the file.
+NOTE: Try to understand the steps described in this document for creating the application design.
+             Ignore the step 7 for creating tests.
+
+
+4. Create a small application that mimics a library catalog. It needs to be able to add books, delete books and list books. Books are
+of two kinds: novels and art albums. They both have names and number of pages. Novels have type (like mystery, sf, etc.) while albums
+have paper quality. Model these entities (book, novel, album) with different classes and inheritance.
+For storing in memory the specific objects for these apps (Card, BankAccount, Novel etc) use just arrays of objects. Ex: Card[ ]
+cardsArray = new Card[5];
