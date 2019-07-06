@@ -1,0 +1,7 @@
+package week3.DataModels;
+
+public class Call {
+    private String callerNumber, calleeNumber;
+    private String time;
+    private double duration;
+}
