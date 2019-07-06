@@ -1,12 +1,12 @@
 package week3;
 
-import week3.DataModels.MessageOverMaximumAdmissibleLengthException;
-import week3.DataModels.OutOfBatteryException;
-import week3.DataModels.Phone;
-import week3.DataObjects.IphoneFive;
-import week3.DataObjects.IphoneX;
-import week3.DataObjects.SamsungGalaxyA80;
-import week3.DataObjects.SamsungGalaxyS6;
+import week3.datamodels.MessageOverMaximumAdmissibleLengthException;
+import week3.datamodels.OutOfBatteryException;
+import week3.datamodels.Phone;
+import week3.dataobjects.IphoneFive;
+import week3.dataobjects.IphoneX;
+import week3.dataobjects.SamsungGalaxyA80;
+import week3.dataobjects.SamsungGalaxyS6;
 
 public class PhoneApp {
     public static void main(String[] args) {

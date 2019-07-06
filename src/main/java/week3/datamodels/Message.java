@@ -1,4 +1,4 @@
-package week3.DataModels;
+package week3.datamodels;
 
 public class Message {
     private String message;

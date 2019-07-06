@@ -1,18 +1,18 @@
-package week3.DataObjects;
+package week3.dataobjects;
 
-public class SamsungGalaxyA80 extends Samsung {
+public class IphoneFive extends Iphone {
     private String thisIMEI;
 
-    public SamsungGalaxyA80 () {
+    public IphoneFive () {
         thisIMEI = String.valueOf(++lastIMEI);
     }
 
-    public SamsungGalaxyA80 (float nominalBatteryLife) {
+    public IphoneFive (float nominalBatteryLife) {
         super(nominalBatteryLife);
         thisIMEI = String.valueOf(++lastIMEI);
     }
 
-    public SamsungGalaxyA80 (float nominalBatteryLife, String phoneNumber) {
+    public IphoneFive (float nominalBatteryLife, String phoneNumber) {
         super(nominalBatteryLife, phoneNumber);
         thisIMEI = String.valueOf(++lastIMEI);
     }

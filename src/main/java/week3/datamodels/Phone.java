@@ -1,4 +1,4 @@
-package week3.DataModels;
+package week3.datamodels;
 
 import java.util.ArrayList;
 import java.util.List;

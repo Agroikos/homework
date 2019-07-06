@@ -1,6 +1,6 @@
-package week3.DataObjects;
+package week3.dataobjects;
 
-import week3.DataModels.Phone;
+import week3.datamodels.Phone;
 
 public abstract class Samsung extends Phone {
 
