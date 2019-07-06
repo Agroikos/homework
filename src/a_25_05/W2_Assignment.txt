@@ -1,0 +1,13 @@
+Intro to java homework
+Implement in java the following algorithms:
+1. Calculate the sum of the first 100 numbers higher than 0
+2. Display the smallest number from an array of number (2 versions: with normal for and with
+foreach)
+3. Display the max digit from a number.
+4. Check if a number is palindrome( e.g palindrome 1221, 34143)
+5. Display all the prime numbers lower than a given number
+6. Change the implementation of the calculator from the previous meeting to use only if-else
+instead of switch.
+7. Change the implementation of the calculator from the previous meeting to not stop after
+one calculation. (Hint: put switch inside a while loop)
+8. Calculate and display the factorial of a given number n. (ex: 4! = 1*2*3*4)
