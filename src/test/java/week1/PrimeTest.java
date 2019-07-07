@@ -1,8 +1,10 @@
-package week2.Test;
+package week1;
+
+import junit.framework.TestCase;
+
+import org.junit.Test;
 
 import week2.RefactoredWeekTwo.PrimeNumsLower;
-import junit.framework.TestCase;
-import org.junit.Test;
 
 public class PrimeTest extends TestCase {
 

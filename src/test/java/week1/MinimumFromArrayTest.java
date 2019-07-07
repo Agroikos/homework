@@ -1,8 +1,10 @@
-package week2.Test;
+package week1;
+
+import junit.framework.TestCase;
+
+import org.junit.Test;
 
 import week2.RefactoredWeekTwo.MinimumFromArray;
-import junit.framework.TestCase;
-import org.junit.Test;
 
 public class MinimumFromArrayTest extends TestCase {
 

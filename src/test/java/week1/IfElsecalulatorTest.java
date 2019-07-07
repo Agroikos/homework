@@ -1,9 +1,10 @@
-package week2.Test;
-
-import week2.RefactoredWeekTwo.IfElseCalculator;
+package week1;
 
 import junit.framework.TestCase;
+
 import org.junit.Test;
+
+import week2.RefactoredWeekTwo.IfElseCalculator;
 
 public class IfElsecalulatorTest extends TestCase {
 

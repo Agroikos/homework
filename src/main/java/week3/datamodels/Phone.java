@@ -21,14 +21,14 @@ public abstract class Phone implements Phoneable {
     public static int lastIMEI = 0;
 
     //constructors
-    public Phone () {
+    public Phone() {
         nominalBatteryLife = 0;
         contactList = new ArrayList<>();
         messagesList = new ArrayList<>();
         callsList = new ArrayList<>();
     }
 
-    public Phone (float nominalBatteryLife) {
+    public Phone(float nominalBatteryLife) {
         this.nominalBatteryLife = nominalBatteryLife;
         this.remainingBattery = this.nominalBatteryLife;
         contactList = new ArrayList<>();
@@ -36,7 +36,7 @@ public abstract class Phone implements Phoneable {
         callsList = new ArrayList<>();
     }
 
-    public Phone (float nominalBatteryLife, String phoneNumber) {
+    public Phone(float nominalBatteryLife, String phoneNumber) {
         this.nominalBatteryLife = nominalBatteryLife;
         this.remainingBattery = this.nominalBatteryLife;
         this.phoneNumber = phoneNumber;
@@ -46,31 +46,31 @@ public abstract class Phone implements Phoneable {
     }
 
     //implement interface
-    public void addContact (int position, String phoneNumber, String firstName, String lastName) {
+    public void addContact(int position, String phoneNumber, String firstName, String lastName) {
         //what's the point of 'position' here?
-         contactList.add(new Contact (phoneNumber, firstName, lastName));
+        contactList.add(new Contact(phoneNumber, firstName, lastName));
     }
 
-    public void listContacts () {
-         contactList.stream().forEach(c -> System.out.println(c.toString()));
+    public void listContacts() {
+        contactList.stream().forEach(c -> System.out.println(c.toString()));
     }
 
-    public void sendMessage (String phoneNumber, String content) throws MessageOverMaximumAdmissibleLengthException,
+    public void sendMessage(String phoneNumber, String content) throws MessageOverMaximumAdmissibleLengthException,
             OutOfBatteryException {
         if (content.length() > 500) throw new MessageOverMaximumAdmissibleLengthException(content.length());
-        if (remainingBattery <=1) throw new OutOfBatteryException();
+        if (remainingBattery <= 1) throw new OutOfBatteryException();
 
         //TODO: implement notification + listener
         System.out.println("Sending message: " + content + ". Going from " + this.phoneNumber + " to " + phoneNumber);
-        remainingBattery-=1;
+        remainingBattery -= 1;
     }
 
-    public void listMessages (String phoneNumber) {
+    public void listMessages(String phoneNumber) {
         System.out.println(messagesList.stream().filter(p -> p.getReceiverNumber().equals(phoneNumber)));
         System.out.println(messagesList.stream().filter(p -> p.getSenderNumber().equals(phoneNumber)));
     }
 
-    public void call (String phoneNumber) throws OutOfBatteryException {
+    public void call(String phoneNumber) throws OutOfBatteryException {
 
         if (remainingBattery <= 2) throw new OutOfBatteryException();
         System.out.println("number called" + phoneNumber);
@@ -82,7 +82,7 @@ public abstract class Phone implements Phoneable {
         contactList.stream().filter(contact -> contact.getPhoneNumber().equals(phoneNumber)).
                 forEach(contact -> contact.callContact(phoneNumber));*/
 
-        remainingBattery-=2;
+        remainingBattery -= 2;
     }
 
     public void viewHistory() {

@@ -44,15 +44,17 @@ public class PalindromeLongCheck {
 
     static boolean checkPalindrome(long number) {
         long numberCopy = number;
-        long reverse;
+        long reverse = 0;
 
+        if(number == 0){
+            return true;
+        }
         while (number != 0) {
             reverse = number % 10;
             number = number / 10;
         }
         return numberCopy == reverse;
     }
-
 
     static boolean checkPalindromeNoArray(long number) {
 
