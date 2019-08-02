@@ -8,11 +8,11 @@ public class Rectangle extends Shape {
     private double sideA, sideB;
 
     public Rectangle () {
-        this.setType(rectangle);
+        super(rectangle);
     }
 
     public Rectangle (double sideA, double sideB) {
-        this.setType(rectangle);
+        super(rectangle);
         this.sideA = sideA;
         this.sideB = sideB;
     }

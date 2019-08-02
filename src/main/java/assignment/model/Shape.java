@@ -1,6 +1,10 @@
 package assignment.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -8,7 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode
 public abstract class Shape {
-
+//not quite usefull, this info can be obtain from the object type (instanceOf)
     private ShapeTypes type;
 
     protected double getPerimeter() {
@@ -22,7 +26,6 @@ public abstract class Shape {
     }
 
     //utility methods
-
     public ShapeTypes getType() {
         return type;
     }
@@ -30,6 +33,7 @@ public abstract class Shape {
     public void setType(ShapeTypes type) {
         this.type = type;
     }
+
 
     public abstract boolean equals (Shape shape);
 

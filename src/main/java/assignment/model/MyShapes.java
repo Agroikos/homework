@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class MyShapes {
+    //bravo pt Set, putini s-au gandit la el
     private Set<Shape> myShapes = new HashSet<>();
 
     public boolean add (Shape element) {

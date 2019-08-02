@@ -1,14 +1,17 @@
 package assignment.model;
 
+import java.util.Objects;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Objects;
-
 import static assignment.model.ShapeTypes.circle;
 
 //why don't these annotations work?
+//they work for me (I'm able to run your code), check the followings:
+// 1. lombok plugin installed
+// 2. Annotation processing enabled
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -16,12 +19,11 @@ public class Circle extends Shape  {
     private double radius;
 
     public Circle () {
-        this.setType(circle);
+        super(circle);
     }
 
     public Circle (double radius) {
-        this.setType(circle);
-        this.radius = radius;
+        super(circle);
     }
 
     @Override
@@ -32,14 +34,6 @@ public class Circle extends Shape  {
     @Override
     public double getSurfaceArea () {
         return Math.PI * this.radius * this.radius;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
     }
 
     @Override
