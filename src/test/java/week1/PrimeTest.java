@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.PrimeNumsLower;
+import week2.refactoredWeekTwo.PrimeNumsLower;
 
 public class PrimeTest extends TestCase {
 

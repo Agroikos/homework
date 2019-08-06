@@ -1,8 +1,8 @@
-package week2.LibraryCatalogue;
+package week2.libraryCatalogue;
 
-import week2.LibraryCatalogue.Entity.Album;
-import week2.LibraryCatalogue.Entity.Novel;
-import week2.LibraryCatalogue.InitialData.DataCollections;
+import week2.libraryCatalogue.Entity.Album;
+import week2.libraryCatalogue.Entity.Novel;
+import week2.libraryCatalogue.InitialData.DataCollections;
 
 public class Main {
     public static void main(String[] args) {

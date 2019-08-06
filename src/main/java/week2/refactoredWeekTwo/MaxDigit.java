@@ -1,4 +1,4 @@
-package week2.RefactoredWeekTwo;
+package week2.refactoredWeekTwo;
 
 import java.util.Scanner;
 

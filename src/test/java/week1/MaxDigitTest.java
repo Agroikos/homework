@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.MaxDigit;
+import week2.refactoredWeekTwo.MaxDigit;
 
 public class MaxDigitTest extends TestCase {
 

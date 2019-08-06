@@ -1,6 +1,6 @@
-package week2.LibraryCatalogue;
+package week2.libraryCatalogue;
 
-import week2.LibraryCatalogue.Entity.Book;
+import week2.libraryCatalogue.Entity.Book;
 
 import java.util.Arrays;
 

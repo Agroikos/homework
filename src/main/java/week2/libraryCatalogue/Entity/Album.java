@@ -1,4 +1,4 @@
-package week2.LibraryCatalogue.Entity;
+package week2.libraryCatalogue.Entity;
 
 public class Album extends Book {
     public enum PaperQuality {Glossy, Coarse, BlackAndWhite, Color}

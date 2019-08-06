@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.PalindromeLongCheck;
+import week2.refactoredWeekTwo.PalindromeLongCheck;
 
 public class PalindromeLongCheckTest extends TestCase {
 

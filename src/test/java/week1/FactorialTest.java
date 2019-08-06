@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.Factorial;
+import week2.refactoredWeekTwo.Factorial;
 
 public class FactorialTest extends TestCase {
 

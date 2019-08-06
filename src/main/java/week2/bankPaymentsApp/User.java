@@ -1,4 +1,4 @@
-package week2.BankPaymentsApp;
+package week2.bankPaymentsApp;
 
 public class User {
     private int numOfCards;

@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.MinimumFromArray;
+import week2.refactoredWeekTwo.MinimumFromArray;
 
 public class MinimumFromArrayTest extends TestCase {
 

@@ -2,6 +2,10 @@ package assignment;
 
 import assignment.model.*;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import static assignment.model.ShapeTypes.circle;
 import static assignment.model.ShapeTypes.triangle;
 
@@ -51,6 +55,9 @@ public class ShapeTool {
 
         System.out.println("circle");
         myShapes.returnAllOfType(circle).stream().forEach(t -> System.out.println(t));
+
+        Map<Integer, Shape> lht = new HashMap();
+        //lht.
 
     }
 }

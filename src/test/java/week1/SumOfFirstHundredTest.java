@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.SumOfFirstHundred;
+import week2.refactoredWeekTwo.SumOfFirstHundred;
 
 public class SumOfFirstHundredTest extends TestCase {
 

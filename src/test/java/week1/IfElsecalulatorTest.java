@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import week2.RefactoredWeekTwo.IfElseCalculator;
+import week2.refactoredWeekTwo.IfElseCalculator;
 
 public class IfElsecalulatorTest extends TestCase {
 

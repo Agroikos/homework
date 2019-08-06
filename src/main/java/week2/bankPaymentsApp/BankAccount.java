@@ -1,4 +1,4 @@
-package week2.BankPaymentsApp;
+package week2.bankPaymentsApp;
 
 public class BankAccount {
     private String IBAN;

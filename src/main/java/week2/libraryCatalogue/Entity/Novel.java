@@ -1,4 +1,4 @@
-package week2.LibraryCatalogue.Entity;
+package week2.libraryCatalogue.Entity;
 
 public class Novel extends Book {
     public enum Type {Mystery, SciFi, Romance, Adventure, Thriller, Crime}

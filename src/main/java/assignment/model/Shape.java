@@ -15,6 +15,8 @@ public abstract class Shape {
 //not quite usefull, this info can be obtain from the object type (instanceOf)
     private ShapeTypes type;
 
+    Shape () {}
+
     protected double getPerimeter() {
         System.out.println("Printing perimeter of shape " + type);
         return 0;

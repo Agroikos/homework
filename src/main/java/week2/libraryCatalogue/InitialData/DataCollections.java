@@ -1,15 +1,15 @@
-package week2.LibraryCatalogue.InitialData;
+package week2.libraryCatalogue.InitialData;
 
-import week2.LibraryCatalogue.Entity.Album;
-import week2.LibraryCatalogue.Entity.Novel;
+import week2.libraryCatalogue.Entity.Album;
+import week2.libraryCatalogue.Entity.Novel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static week2.LibraryCatalogue.Entity.Album.PaperQuality.*;
-import static week2.LibraryCatalogue.Entity.Album.PaperQuality.Coarse;
-import static week2.LibraryCatalogue.Entity.Novel.Type.Romance;
-import static week2.LibraryCatalogue.Entity.Novel.Type.SciFi;
+import static week2.libraryCatalogue.Entity.Album.PaperQuality.*;
+import static week2.libraryCatalogue.Entity.Album.PaperQuality.Coarse;
+import static week2.libraryCatalogue.Entity.Novel.Type.Romance;
+import static week2.libraryCatalogue.Entity.Novel.Type.SciFi;
 
 public class DataCollections {
     //testing values
