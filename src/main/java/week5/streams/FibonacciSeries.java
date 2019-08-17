@@ -4,6 +4,7 @@
 package week5.streams;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class FibonacciSeries {
@@ -26,15 +27,25 @@ public class FibonacciSeries {
             System.out.println("i: " + i + " : " + fiboBig[i] + " ");
         }
 
+        Arrays.stream(fibonacciLong(50)).forEach(i -> System.out.println("fibonnaci long: --> " + i));
     }
 
     //nu m-am prins cum sa il fac, e luat de pe net
     public static int[] fibonacci(int n) {
         return Stream.iterate(new int[]{0, 1}, i -> new int[]{i[1], i[0] + i[1]})
-                .limit(n)
-                .map(i -> i[0])
-                .mapToInt(Integer::intValue)
-                .toArray();
+                     .limit(n)
+                     .map(i -> i[0])
+                     .mapToInt(Integer::intValue)
+                     .toArray();
+    }
+
+    //asa e cel mai simplu sa mearga pana la numere mari
+    public static long[] fibonacciLong(int n) {
+        return Stream.iterate(new long[]{0, 1}, i -> new long[]{i[1], i[0] + i[1]})
+                     .limit(n)
+                     .map(i -> i[0])
+                     .mapToLong(Long::longValue)
+                     .toArray();
     }
 
     //de ce nu merge git push??????
@@ -42,9 +53,9 @@ public class FibonacciSeries {
     public static BigInteger[] fibonacciBigInt(int n) {
 
         return Stream.iterate(new BigInteger[]{BigInteger.valueOf(0), BigInteger.valueOf(1)},
-                i -> new BigInteger[] {i[1], i[0].add(i[1]) } )
-                .limit(n)
-                .map(i -> i[0])
-                .toArray(BigInteger[]::new);
+                i -> new BigInteger[]{i[1], i[0].add(i[1])})
+                     .limit(n)
+                     .map(i -> i[0])
+                     .toArray(BigInteger[]::new);
     }
 }
