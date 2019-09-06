@@ -98,11 +98,13 @@ public class MyFileUtils {
             Queue<String> wordsOne = new LinkedList<>();
             Queue<String> wordsTwo = new LinkedList<>();
 
-            while (((lineOne = readerOne.readLine()) != null) &&
-            ((lineTwo = readerTwo.readLine()) != null)) {
+            while ((((lineOne = readerOne.readLine()) != null) ||
+                    (!wordsOne.isEmpty()) ) &&
+            ((lineTwo = readerTwo.readLine()) != null) ||
+                    (!wordsTwo.isEmpty())) {
 
-                wordsOne.addAll(Arrays.asList(lineOne.split("[^a-zA-Z]")));
-                wordsTwo.addAll(Arrays.asList(lineTwo.split("[^a-zA-Z]")));
+                if (lineOne != null) wordsOne.addAll(Arrays.asList(lineOne.split("[^a-zA-Z]")));
+                if (lineTwo != null) wordsTwo.addAll(Arrays.asList(lineTwo.split("[^a-zA-Z]")));
 
                 System.out.println("WordsOne: " + wordsOne);
                 System.out.println("WordsTwo: " + wordsTwo);
