@@ -1,0 +1,74 @@
+IO homework
+
+1. Implement a method to get a list of all file/directory names from the given.
+
+2. Implement a method to get specific files by extensions from a specified folder.
+
+3. Implement a method to check if a file or directory specified by pathname exists or not.
+
+4. Implement a method to check if a file or directory has read and write permission.
+
+5. Implement a method to check if given pathname is a directory or a file.
+
+6. Implement a method to compare two files lexicographically.
+
+In mathematics, the lexicographic or lexicographical order (also known as lexical order, dictionary order,
+
+alphabetical order or lexicographic(al) product) is a generalization of the way
+
+the alphabetical order of words is based on the alphabetical order of their component letters.
+
+This generalization consists primarily in defining a total order over the sequences
+
+(often called words in computer science) of elements of a finite totally ordered set, often called alphabet.
+
+7. Implement a method to get last modified time of a file.
+
+8. Implement method to read input from java console.
+
+9. Implement a method to get file size in bytes, kb, mb.
+
+10. Implement a method to read contents from a file into byte array.
+
+11. Implement a method to read a file content line by line.
+
+12. Implement a method to read a plain text file.
+
+13. Implement a method to read a file line by line and store it into a variable.
+
+14. Implement a method to store text file content line by line into an array.
+
+15. Implement a method to write and read a plain text file.
+
+16. Implement a method to append text to an existing file.
+
+17. Implement a method to read first 3 lines from a file.
+
+18. Implement a method to find the longest word in a text file.
+19. Implement a terminal (cmd) in Java using IO operations and new nice :)  features from Java 8.
+Your app should replicate at least 8 commands and a help command (exclusive) that shows the available commands.
+Commands are given in the console (including the options for that command) and result of the command should also
+be displayed in the console or a feedback message.
+
+E.g.
+1. dir command from cmd displays the content of the current directory (in Linux ls is the equivalent)
+Usage:
+dir
+
+Output (for my current directory):
+
+.classpath
+
+.project
+
+.settings
+
+pom.xml
+
+src
+
+target
+
+2. cd path2 will change the current path from the cmd to path2
+Usage: cd C:\Users\ionut.spalatelu\Desktop\eclipse-workspace\Challenges
+No output for this one, will be visible at the cursor.
