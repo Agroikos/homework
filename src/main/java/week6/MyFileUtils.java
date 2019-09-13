@@ -419,11 +419,17 @@ public class MyFileUtils {
     //Commands are given in the console (including the options for that command) and result of the command should also
     //be displayed in the console or a feedback message.
 
-    public static void terminalUtility(Object callingObject) {
+    public static void terminalUtility(Class callingClass) {
         String currentDir = new java.io.File(".").toURI().toString();
-        String pathToClass = callingObject.getClass().getResource("WorkingWithFiles.class").toString();
-        System.out.println(pathToClass.substring(currentDir.length() - 2)); // -2 to get rid of the /./ at the end of the current dir
+        String pathToClass = callingClass.getResource("URI").toString();
+        //String pathToClass = callingClass.getClass().getResource("WorkingWithFiles.class").toString();
+        //System.out.println(pathToClass.substring(currentDir.length() - 2)); // -2 to get rid of the /./ at the end of the current dir
 
+        System.out.println("testing: ");
+        System.out.println("current dir: " + currentDir);
+        System.out.println("pathToClass: " + pathToClass);
+        System.out.println();
+        /*
         System.out.println("Type command:");
         Scanner scanner = new Scanner(System.in);
         String command = "";
@@ -434,7 +440,8 @@ public class MyFileUtils {
 
             switch (commands[0]) {
                 case "mkdir":
-                    System.out.println("Make directory:");
+                    System.out.println("Make directory with name : " + commands[1]);
+
                     break;
                 case "rmdir":
                     System.out.println("Remove");
@@ -460,7 +467,7 @@ public class MyFileUtils {
 
 
             }
-        }
+        }*/
 
     }
 }

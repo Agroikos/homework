@@ -30,6 +30,17 @@ public class WorkingWithFiles {
         location = "/home/vernalissimo/Desktop/Programming/Learning_Projects/Scoala_Informala/newHomeworkWithGradle/homework/src/main/java/week5/streams";
         System.out.println("Is location file or directory: " + isFileOrFolder(location));
 
+         //6. Implement a method to compare two files lexicographically.
+        String fileA = "/home/vernalissimo/Desktop/Programming/Learning_Projects/Scoala_Informala/newHomeworkWithGradle/homework/src/main/java/week6/FileA.txt";
+        String fileB = "/home/vernalissimo/Desktop/Programming/Learning_Projects/Scoala_Informala/newHomeworkWithGradle/homework/src/main/java/week6/FileB.txt";
+        int compare = compareFilesLexicographically(fileA,fileB);
+
+        System.out.println("Main method: Compare equals: ----> " + compare);
+
+        if (compare > 0) System.out.println("First file is lexicographically greater.");
+        else if (compare < 0) System.out.println("Second file is lexicographically greater.");
+        else System.out.println("Files are lexicographically equal.");
+
         //7. Implement a method to get last modified time of a file.
         location = "/home/vernalissimo/Desktop/Programming/Learning_Projects/Scoala_Informala/newHomeworkWithGradle/homework/src/main/java/week5/streams/FibonacciSeries.java";
 
@@ -105,16 +116,11 @@ public class WorkingWithFiles {
         //Commands are given in the console (including the options for that command) and result of the command should also
         //be displayed in the console or a feedback message.
 
-        //6. Implement a method to compare two files lexicographically.
-        String fileA = "/home/vernalissimo/Desktop/Programming/Learning_Projects/Scoala_Informala/newHomeworkWithGradle/homework/src/main/java/week6/FileA.txt";
-        String fileB = "/home/vernalissimo/Desktop/Programming/Learning_Projects/Scoala_Informala/newHomeworkWithGradle/homework/src/main/java/week6/FileB.txt";
-        int compare = compareFilesLexicographically(fileA,fileB);
+        String strClassPath = System.getProperty("java.class.path");
+        strClassPath = WorkingWithFiles.class.getResource();
 
-        System.out.println("Main method: Compare equals: ----> " + compare);
-
-        if (compare > 0) System.out.println("First file is lexicographically greater.");
-        else if (compare < 0) System.out.println("Second file is lexicographically greater.");
-        else System.out.println("Files are lexicographically equal.");
+        System.out.println("Classpath is " + strClassPath);
+        //terminalUtility(WorkingWithFiles.class);
     }
 
 }
