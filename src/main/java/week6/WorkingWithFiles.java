@@ -117,7 +117,7 @@ public class WorkingWithFiles {
         //be displayed in the console or a feedback message.
 
         String strClassPath = System.getProperty("java.class.path");
-        strClassPath = WorkingWithFiles.class.getResource();
+        //strClassPath = WorkingWithFiles.class.getResource();
 
         System.out.println("Classpath is " + strClassPath);
         //terminalUtility(WorkingWithFiles.class);
