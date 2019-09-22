@@ -20,7 +20,7 @@ public class ProductDAOImpl implements ProductDAO {
 
              */
 
-        Product sampleProduct = new Product();
+        /*Product sampleProduct = new Product();
         sampleProduct.setProductCode("S72_3666");
         sampleProduct.setProductName("Indian");
         sampleProduct.setProductLine("Motorcycles");
@@ -33,7 +33,11 @@ public class ProductDAOImpl implements ProductDAO {
 
         int rowsModified = productDAO.create(sampleProduct);
         System.out.println("Rows modified: " + rowsModified);
-        productDAO.findAll().stream().forEach(System.out::println);
+        productDAO.findAll().stream().forEach(System.out::println);*/
+
+        System.out.println("All my orders:");
+        OrderDAOImpl orderDAO = new OrderDAOImpl();
+        orderDAO.findAll().stream().forEach(o -> System.out.println(o));
 
     }
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class OrderDAOImpl implements OrderDAO {
 
-    OrderDAOImpl orderDAO = new OrderDAOImpl();
+    //OrderDAOImpl orderDAO = new OrderDAOImpl();
 
     @Override
     public int create(Order order) {
@@ -141,8 +141,25 @@ public class OrderDAOImpl implements OrderDAO {
 
                 order.setOrderNumber(new BigInteger(resultSet.getString("orderNumber")));
                 order.setOrderDate(LocalDate.parse(resultSet.getString("orderDate")));
-                order.setRequiredDate(LocalDate.parse(resultSet.getString("requiredDate")));
-                order.setShippedDate(LocalDate.parse(resultSet.getString("shippedDate")));
+
+                try {
+                    order.setRequiredDate(LocalDate.parse(resultSet.getString("requiredDate")));
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } catch (NullPointerException e) {
+                    //e.printStackTrace();
+                    order.setRequiredDate(null);
+                }
+
+                try {
+                    order.setShippedDate(LocalDate.parse(resultSet.getString("shippedDate")));
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } catch (NullPointerException e) {
+                    //e.printStackTrace();
+                    order.setShippedDate(null);
+                }
+
                 order.setStatus(resultSet.getString("status"));
                 order.setComments(resultSet.getString("comments"));
                 order.setCustomerNumber(new BigInteger(resultSet.getString("customerNumber")));
