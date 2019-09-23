@@ -127,16 +127,6 @@ public class OrderDAOImpl implements OrderDAO {
             //moves the cursor along the resultSet
             while (resultSet.next()) {
 
-               /*
-        private BigInteger orderNumber;
-        private LocalDate orderDate;
-        private LocalDate requiredDate;
-        private LocalDate shippedDate;
-        private String status;
-        private String comments;
-        private BigInteger customerNumber;
-         */
-
                 Order order = new Order();
 
                 order.setOrderNumber(new BigInteger(resultSet.getString("orderNumber")));

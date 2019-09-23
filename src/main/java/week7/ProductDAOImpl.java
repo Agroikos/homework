@@ -8,38 +8,6 @@ import java.util.List;
 import static java.sql.DriverManager.getConnection;
 
 public class ProductDAOImpl implements ProductDAO {
-    public static void main(String[] args) {
-
-        ProductDAOImpl productDAO = new ProductDAOImpl();
-        //productDAO.findAll().stream().forEach(System.out::println);
-
-          /*
-            ('S10_1678','1969 Harley Davidson Ultimate Chopper','Motorcycles','1:10','Min Lin Diecast',
-            'This replica features working kickstand, front suspension, gear-shift lever, footbrake lever, drive chain, wheels and steering. All parts are particularly delicate due to their precise scale and require special care and attention.',
-            7933,'48.81','95.70'),
-
-             */
-
-        /*Product sampleProduct = new Product();
-        sampleProduct.setProductCode("S72_3666");
-        sampleProduct.setProductName("Indian");
-        sampleProduct.setProductLine("Motorcycles");
-        sampleProduct.setProductScale("1:1");
-        sampleProduct.setProductVendor("Min Lin Diecast");
-        sampleProduct.setProductDescription("self-explanatory");
-        sampleProduct.setQuantityInStock(2);
-        sampleProduct.setBuyPrice(new BigDecimal(27.99));
-        sampleProduct.setMSRP(new BigDecimal(44.99));
-
-        int rowsModified = productDAO.create(sampleProduct);
-        System.out.println("Rows modified: " + rowsModified);
-        productDAO.findAll().stream().forEach(System.out::println);*/
-
-        System.out.println("All my orders:");
-        OrderDAOImpl orderDAO = new OrderDAOImpl();
-        orderDAO.findAll().stream().forEach(o -> System.out.println(o));
-
-    }
 
     @Override
     public int create(Product product) {
@@ -74,7 +42,38 @@ public class ProductDAOImpl implements ProductDAO {
 
     @Override
     public Product findById(String productCode) {
-        return null;
+
+        try (Connection conn = getConnection()) {
+
+            String sql = "SELECT * FROM products WHERE productCode = ?";
+
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+
+            preparedStatement.setString(1, productCode);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                Product product = new Product();
+
+                product.setProductCode(resultSet.getString("productCode"));
+                product.setProductName(resultSet.getString("productName"));
+                product.setProductLine(resultSet.getString("productLine"));
+                product.setProductScale(resultSet.getString("productScale"));
+                product.setProductVendor(resultSet.getString("productVendor"));
+                product.setProductDescription(resultSet.getString("productDescription"));
+                product.setQuantityInStock(resultSet.getInt("quantityInStock"));
+                product.setBuyPrice(resultSet.getBigDecimal("buyPrice"));
+                product.setMSRP(resultSet.getBigDecimal("MSRP"));
+
+                return product;
+            } else return null;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     @Override
@@ -124,7 +123,7 @@ public class ProductDAOImpl implements ProductDAO {
         int rowsModified = -1;
 
         try (Connection connection = getConnection()) {
-            String sql = "DELETE FROM products WHERE id = ?";
+            String sql = "DELETE FROM products WHERE productCode = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, productCode);
 
