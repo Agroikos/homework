@@ -46,10 +46,4 @@ public class LogisticsTool {
         });
     }
 
-    public static <T> Predicate<T> distinctByLocation(Function<? super T, ?> keyExtractor) {
-        Set<Object> seen = ConcurrentHashMap.newKeySet();
-        return t -> seen.add(keyExtractor.apply(t));
-    }
-
-
 }
