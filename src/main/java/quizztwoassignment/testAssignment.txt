@@ -1,0 +1,26 @@
+The system should be able to group the packages based on the target location and delivery date.
+
+--------------------------------------------------
+
+
+Each delivery action must be completed in a time interval equal in seconds with the distance in km to destination.
+
+E.g. if there is a location 20 km far, the delivery for that location should take 20 seconds.
+
+
+
+RESULT: After all the package groups in all delivery dates are complete, print the following to console:
+
+- total value of all delivered packages
+
+- total value of the revenue computed for all groups delivered
+
+
+
+The test data must be loaded from a file in the classpath containing the following data lines:
+
+--------------------------------------------------
+
+HINT:
+
+- with the above list, trigger the calculation process
