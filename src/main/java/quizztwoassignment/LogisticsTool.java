@@ -1,8 +1,5 @@
 package quizztwoassignment;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,12 +20,11 @@ public class LogisticsTool {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                delivs.add(new Package(line));
+                if (line.length() > 1) delivs.add(new Package(line));
             }
 
         } catch (IOException e) {
             System.out.println("Oops, this happened: " + e.getMessage());
-            System.out.println(e);
         }
 
 
@@ -44,7 +40,10 @@ public class LogisticsTool {
         Collection<List<Package>> listOfLists = delivs.stream()
                 .collect(Collectors.groupingBy(Package::getLocation)).values();
 
-        listOfLists.stream().forEach(t -> new LocationAggregator(t));
+        listOfLists.stream().forEach(t -> {
+            Thread runnie = new LocationAggregator(t);
+            runnie.start();
+        });
     }
 
     public static <T> Predicate<T> distinctByLocation(Function<? super T, ?> keyExtractor) {

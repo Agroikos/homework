@@ -19,8 +19,9 @@ import java.util.stream.Collectors;
 
 @Getter
 @Setter
-public class LocationAggregator implements Runnable {
+public class LocationAggregator extends Thread {
 
+    public static int threadNum;
 
     private String thisLocation;
     private List<Package> delivsToThisLocation = new ArrayList<>();
@@ -30,6 +31,9 @@ public class LocationAggregator implements Runnable {
 
 
     public LocationAggregator(List<Package> delivs) {
+
+        synchronized (this) {++threadNum;}
+
         this.delivsToThisLocation = delivs;
         this.thisLocation = delivsToThisLocation.get(0).getLocation();
     }
@@ -39,11 +43,12 @@ public class LocationAggregator implements Runnable {
         totalVal = delivsToThisLocation.stream().collect(Collectors.summingInt(Package::getValue));
         totalRevenue = delivsToThisLocation.stream().collect(Collectors.summingInt(Package::getDistance));
 
+        System.out.println("Thread #" + threadNum );
         System.out.print("Location: " + thisLocation);
         System.out.print(" total value: " + totalVal);
         System.out.println(" total revenue: " + totalRevenue + " Lei");
 
-        System.out.println("Elements from thread for location: ");
+        System.out.println("Elements for location: ");
         delivsToThisLocation.stream().forEach(t -> System.out.println("[Delivering for <" + t.getLocation()
                 + "> and date <" + t.getDate() +"> in <" + t.getDistance() + "> seconds]"));
 

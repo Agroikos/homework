@@ -17,11 +17,12 @@ For each package you need to have the following data:
 - delivery date
  */
 
-
     private String location;
     private int distance;
     private int value;
     private LocalDate date;
+
+    public static int entryNum;
 
 
     public Package (String entry) {
@@ -35,6 +36,14 @@ For each package you need to have the following data:
             distance = Integer.parseInt(elements[1]);
             value = Integer.parseInt(elements[2]);
             date = LocalDate.parse(elements[3]);
+
+           /* System.out.println("Test: Package details # " + ++entryNum);
+            System.out.println("Location: " + location);
+            System.out.println("Distance: " + distance);
+            System.out.println("Value: " + value);
+            System.out.println("Date: " + date);
+            System.out.println();
+        */
         }
     }
 
