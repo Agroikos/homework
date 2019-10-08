@@ -13,26 +13,27 @@ package quizztwoassignment;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Getter
 @Setter
-public class LocationAggregator extends Thread {
+public class LocationThread extends Thread {
 
     public static int threadNum;
 
     private String thisLocation;
-    private List<Package> delivsToThisLocation = new ArrayList<>();
+    private List<Package> delivsToThisLocation;
 
     private int totalVal = 0;
     private int totalRevenue = 0;
 
 
-    public LocationAggregator(List<Package> delivs) {
+    public LocationThread(List<Package> delivs) {
 
-        synchronized (this) {++threadNum;}
+        synchronized (this) {
+            ++threadNum;
+        }
 
         this.delivsToThisLocation = delivs;
         this.thisLocation = delivsToThisLocation.get(0).getLocation();
@@ -43,14 +44,15 @@ public class LocationAggregator extends Thread {
         totalVal = delivsToThisLocation.stream().collect(Collectors.summingInt(Package::getValue));
         totalRevenue = delivsToThisLocation.stream().collect(Collectors.summingInt(Package::getDistance));
 
-        System.out.println("Thread #" + threadNum );
-        System.out.print("Location: " + thisLocation);
-        System.out.print(" total value: " + totalVal);
+        printThread(delivsToThisLocation, totalVal, totalRevenue, thisLocation);
+
+    }
+
+    synchronized public static void printThread(List<Package> delivs, int totalVal, int totalRevenue, String thisLocation) {
+        System.out.print(thisLocation + ": total value: " + totalVal + ",");
         System.out.println(" total revenue: " + totalRevenue + " Lei");
 
-        System.out.println("Elements for location: ");
-        delivsToThisLocation.stream().forEach(t -> System.out.println("[Delivering for <" + t.getLocation()
-                + "> and date <" + t.getDate() +"> in <" + t.getDistance() + "> seconds]"));
-
+        delivs.stream().forEach(t -> System.out.println("[Delivering for <" + t.getLocation()
+                + "> and date <" + t.getDate() + "> in <" + t.getDistance() + "> seconds]"));
     }
 }
